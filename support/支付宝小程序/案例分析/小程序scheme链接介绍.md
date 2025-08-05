@@ -59,20 +59,20 @@ window.location.href="alipays://platformapi/startapp?appId=20170713077xxxxx&page
 ```
 
 ###  Android App 跳转小程序
-```javascript
+```java
 Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("alipays://platformapi/startapp?appId=20170713077xxxxx&page=x/yz&query=xx%3dxx"));startActivity(intent);
 ```
 
 ### iOS App 跳转小程序
-```javascript
+```swift
 let urlString = "alipays://platformapi/startapp?appId=20170713077xxxxx&page=x/yz&query=xx%3dxx"
-       let url = URL(string: urlString)
-       if UIApplication.shared.canOpenURL(url!) {
-             UIApplication.shared.open(url!)
-      }else{
-             let appString = "https://www.apple.com/itunes/"             
-             let appUrl = URL(string: appString)
-             UIApplication.shared.open(appUrl!)
-        }
+let url = URL(string: urlString)
+if UIApplication.shared.canOpenURL(url!) {
+    UIApplication.shared.open(url!)
+} else {
+    let appString = "https://www.apple.com/itunes/"
+    let appUrl = URL(string: appString)
+    UIApplication.shared.open(appUrl!)
+}
 ```
 
